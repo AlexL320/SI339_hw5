@@ -117,10 +117,13 @@ header{
         background-image: none;
     }
     /*Step 17*/
+    nav{
+        width: 100%;
+    }
     .nav_links{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     /*Step 18*/
     .pricing{
@@ -136,7 +139,20 @@ header{
     }
 
     /*Step 20*/
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #gallery{
+        visibility: hidden;
+    }
+
     .gallery{
         visibility: hidden;
+    }
+
+    h1{
+        margin-top: 10%;
     }
 }
