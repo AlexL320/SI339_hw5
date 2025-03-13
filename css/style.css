@@ -1,7 +1,13 @@
 /*Step 1*/
-@keyframes mymove {
-    from {top: 0px;}
-    to {top: 200px;}
+@keyframes logosize {
+    from {width: 25px;}
+    to {width: 475px;}
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+#logo{
+    animation: logosize 5s;
 }
 
 /*Step 2*/
@@ -32,13 +38,15 @@ header{
     background-color: #288088;
     border: solid 2px #45ADAD;
     padding: 20px 0 20px 0;
-    /*Need to fix the border radius*/
     border-top-right-radius: 50px;
     border-top-left-radius: 50px;
 }
 
 /*Step 7 and Step 8*/
-
+.card{
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+}
 
 /*Step 9*/
 .gallery{
@@ -91,5 +99,44 @@ header{
 
     h1{
         margin-top: 7%;
+    }
+}
+
+/*Step 14*/
+@media (prefers-reduced-motion: reduce){
+    #logo{
+        animation: none;
+    }
+}
+
+/*Step 15*/
+@media print{
+    body{
+        font-family: Arial, Helvetica;
+        /*Step 16*/
+        background-image: none;
+    }
+    /*Step 17*/
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    /*Step 18*/
+    .pricing{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    /*Step 19*/
+    .card{
+        border: solid 2px #45ADDD;
+        flex-basis: 325px;
+    }
+
+    /*Step 20*/
+    .gallery{
+        visibility: hidden;
     }
 }
